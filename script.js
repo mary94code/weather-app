@@ -1,4 +1,4 @@
-const baseUrl = 'http://api.weatherapi.com/v1'
+const baseUrl = 'https://api.weatherapi.com/v1'
 const apiKey = 'f61ff078d25448c3b0a131547221405'
 const select = document.querySelector("#days");
 const search = document.querySelector("#search");
