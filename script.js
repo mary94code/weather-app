@@ -1,4 +1,4 @@
-const baseUrl = 'http://api.weatherapi.com/v1'
+const baseUrl = 'https://api.weatherapi.com/v1'
 const apiKey = 'f61ff078d25448c3b0a131547221405'
 const select = document.querySelector("#days");
 const search = document.querySelector("#search");
@@ -53,4 +53,5 @@ search.addEventListener("click", function (e) {
 
 fetchWeather('auto:ip', select.value)
 
+// http://api.weatherapi.com/v1/forecast.json?key=f61ff078d25448c3b0a131547221405&q=London&days=1&aqi=yes&alerts=no
 // http://api.weatherapi.com/v1/forecast.json?key=f61ff078d25448c3b0a131547221405&q=London&days=1&aqi=yes&alerts=no
