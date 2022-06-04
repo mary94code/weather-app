@@ -17,8 +17,9 @@ const fetchWeather = (query, selectVal) => {
             const img = document.createElement("img");
             const div2 = document.createElement("div");
             const span = document.createElement("span");
-            const sunrise = document.createElement("p");
-            const sunset = document.createElement("p");
+            const sunrise = document.createElement("div");
+            const sunset = document.createElement("div");
+            const date = document.createElement("div");
             div.classList.add("weather-container");
             div2.classList.add("weather-description");
             h2.innerText = data.location.name;
@@ -27,14 +28,15 @@ const fetchWeather = (query, selectVal) => {
             span.innerText = item.day.avgtemp_c + ' ℃';
             sunrise.innerText = 'Sunrise: ' + item.astro.sunrise;
             sunset.innerText = 'Sunset: ' + item.astro.sunset;
+            date.innerText = "Forecast for " + item.date.split("-").reverse().join(".")
             div.append(h2)
+            div.append(date)
             div.append(img)
             div.append(div2)
             div.append(span)
             div.append(sunrise)
             div.append(sunset)
             root.append(div)
-            console.log(sunset);
         })
     })
 }
